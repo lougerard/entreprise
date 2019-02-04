@@ -1,25 +1,4 @@
-VLans
-Site LLN (172.16.x.x)
-•	Vlan 1 = server
-•	Vlan 99 = natif
-•	Vlan 98 = management
-•	Vlan 2 = guest
-•	Vlan 3 = user
-•	Vlan 4 = admin
-•	Vlan 5 = direction
-•	Vlan 6 = secretariat
-
-Site KYOTO (172.17.x.x)
-•	Vlan 1 = server
-•	Vlan 99 = natif
-•	Vlan 98 = management
-•	Vlan 2 = guest
-•	Vlan 3 = user
-•	Vlan 4 = admin
-•	Vlan 5 = direction
-•	Vlan 6 = secretariat
-
-
+!
 conf t
 ! CREATION DES VLANS
 vlan 99
