@@ -2,29 +2,29 @@
 conf t
 ! CREATION DES VLANS
 vlan 99
-name native
+name NATIVE
 vlan 98
-name management
+name MANAGEMENT
 vlan 2
-name guest
+name GUEST
 vlan 3
-name user
+name USER
 vlan 4
-name admin
+name ADMIN
 vlan 5
-name direction
+name DIRECTION
 vlan 6
-name secretariat
+name SECRETARIAT
 vlan 7
-name server
+name SERVER
 vlan 8
-name formation
+name FORMATION
 vlan 9
 name IT
 vlan 10
-name marketing
+name MARKETING
 vlan 11
-name vente
+name VENTE
 !
 ! configuration des vlans
 int vlan 99
