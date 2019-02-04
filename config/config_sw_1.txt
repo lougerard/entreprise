@@ -1,0 +1,33 @@
+//Config Switch L2
+!
+!
+en
+conf t
+hostname LLN-SW-1
+banner motd #Bienvenue sur le Switch 1#
+!
+!
+en
+conf t
+enable secret groupb
+service password-encryption
+!
+!
+en
+conf t
+line cons 0
+password groupb 
+login
+logging synchronous
+!
+!
+en
+conf t
+line vty 0 15
+password groupb
+login
+!
+!
+en
+conf t
+no ip domain lookup

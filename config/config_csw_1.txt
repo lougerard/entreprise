@@ -1,0 +1,70 @@
+//Config LLN-CSW-1
+!
+!
+en
+conf t
+hostname LLN-CSW-1
+banner motd #Bienvenue sur le Core Switch 1#
+!
+!
+en
+conf t
+enable secret groupb
+service password-encryption
+!
+!
+conf t
+line cons 0
+password groupb
+login
+logging synchronous
+!
+!
+en
+conf t
+line vty 0 15
+password groupb
+login
+!
+!
+conf t
+no ip domain lookup
+!
+!
+en 
+conf t
+vlan 99
+name NATIVE
+exit
+vlan 2
+name GUEST
+exit
+vlan 3
+name USER
+exit 
+vlan 4
+name ADMIN
+exit
+vlan 5
+name DIRECTION
+vlan 6
+name SECRETARIAT
+vlan 7
+name SERVER
+vlan 8
+name FORMATION
+vlan 9
+name IT
+vlan 10
+name MARKETING
+vlan 11
+name VENTE
+exit
+!
+!
+en
+conf t
+vtp domain CCorp-LLN
+vtp mode server
+vtp password groupb
+end

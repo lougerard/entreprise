@@ -1,0 +1,48 @@
+//Config LLN-CSW-2
+!
+!
+en
+conf t
+hostname LLN-CSW-2
+banner motd #Bienvenue sur le Core Switch 2#
+!
+!
+en
+conf t
+enable secret groupb
+service password-encryption
+!
+!
+en
+conf t
+line cons 0
+password groupb
+login
+logging synchronous
+!
+!
+en
+conf t
+line vty 0 15
+password groupb
+login
+!
+!
+en
+conf t
+no ip domain lookup
+!
+!
+en
+conf t
+int 1/0/24
+switchport trunk encapsulation dot1q
+switchport mode trunk
+!
+!
+en
+conf t
+vtp mode client
+vtp domain CCorp-LLN
+!
+!
