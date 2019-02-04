@@ -71,3 +71,4 @@ int vlan 11
 ip address 172.16.11.0 255.255.255.0
 no shut
 !
+copy run start
