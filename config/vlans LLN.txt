@@ -17,6 +17,14 @@ vlan 6
 name secretariat
 vlan 7
 name server
+vlan 8
+name formation
+vlan 9
+name IT
+vlan 10
+name marketing
+vlan 11
+name vente
 !
 ! configuration des vlans
 int vlan 99
@@ -44,6 +52,22 @@ ip address 172.16.6.0 255.255.255.0
 no shut
 !
 int vlan 7
-ip address 172.16.1.0 255.255.255.0
+ip address 172.16.7.0 255.255.255.0
+no shut
+!
+int vlan 8
+ip address 172.16.8.0 255.255.255.0
+no shut
+!
+int vlan 9
+ip address 172.16.9.0 255.255.255.0
+no shut
+!
+int vlan 10
+ip address 172.16.10.0 255.255.255.0
+no shut
+!
+int vlan 11
+ip address 172.16.11.0 255.255.255.0
 no shut
 !
