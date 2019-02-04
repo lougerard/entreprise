@@ -1,0 +1,89 @@
+Current configuration : 1343 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname LLN-router
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$IIu8$wdqq8y2zPZnIkP8t1CEDr/
+!
+no aaa new-model
+!
+resource policy
+!
+memory-size iomem 15
+ip cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description "vers internet"
+ ip address 193.190.65.85 255.255.255.248
+ ip nat outside
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ description "vers lan"
+ ip address 172.16.3.1 255.255.255.0
+ ip nat inside
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/0/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/1/0
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/1/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+ip default-gateway 193.190.65.81
+ip route 0.0.0.0 0.0.0.0 193.190.65.81
+!
+no ip http server
+no ip http secure-server
+ip nat inside source list 1 interface FastEthernet0/0 overload
+!
+access-list 1 permit 172.16.3.0 0.0.0.255
+!
+control-plane
+!
+banner motd ^CBienvenue sur le routeur 3 du groupe B !^C
+!
+line con 0
+ password 7 00030109114B09
+ login
+line aux 0
+line vty 0 4
+ password 7 08265E411C0907
+ login
+line vty 5 15
+ password 7 121E1718071B0E
+ login
+!
+scheduler allocate 20000 1000
+end
