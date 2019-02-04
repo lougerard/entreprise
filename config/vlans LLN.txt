@@ -17,7 +17,7 @@ vlan 5
 name direction
 vlan 6
 name secretariat
-
+!
 ! configuration des vlans
 int vlan 99
 ip address 172.16.99.0 255.255.255.0
