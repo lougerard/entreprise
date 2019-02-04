@@ -1,6 +1,6 @@
 ! configuration switch layer 3 numéro 1
 Conf t
-vtp domain LLN
+vtp domain CCorp-LLN
 vtp mode client
 vtp password groupb
 end
