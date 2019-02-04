@@ -1,0 +1,69 @@
+VLans
+Site LLN (172.16.x.x)
+•	Vlan 1 = server
+•	Vlan 99 = natif
+•	Vlan 98 = management
+•	Vlan 2 = guest
+•	Vlan 3 = user
+•	Vlan 4 = admin
+•	Vlan 5 = direction
+•	Vlan 6 = secretariat
+
+Site KYOTO (172.17.x.x)
+•	Vlan 1 = server
+•	Vlan 99 = natif
+•	Vlan 98 = management
+•	Vlan 2 = guest
+•	Vlan 3 = user
+•	Vlan 4 = admin
+•	Vlan 5 = direction
+•	Vlan 6 = secretariat
+
+
+conf t
+! CREATION DES VLANS
+vlan 99
+name native
+vlan 1
+name server
+vlan 98
+name management
+vlan 2
+name guest
+vlan 3
+name user
+vlan 4
+name admin
+vlan 5
+name direction
+vlan 6
+name secretariat
+
+! configuration des vlans
+int vlan 99
+ip address 172.16.99.0 255.255.255.0
+no shut
+!
+int vlan 1
+ip address 172.16.1.0 255.255.255.0
+no shut
+!
+int vlan 2
+ip address 172.16.2.0 255.255.255.0
+no shut
+!
+int vlan 3
+ip address 172.16.3.0 255.255.255.0
+no shut
+!
+int vlan 4
+ip address 172.16.4.0 255.255.255.0
+no shut
+!
+int vlan 5
+ip address 172.16.5.0 255.255.255.0
+no shut
+!
+int vlan 6
+ip address 172.16.6.0 255.255.255.0
+no shut
