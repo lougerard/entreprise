@@ -7,8 +7,6 @@ vlan 98
 name MANAGEMENT
 vlan 2
 name GUEST
-vlan 3
-name USER
 vlan 4
 name ADMIN
 vlan 5
@@ -33,10 +31,6 @@ no shut
 !
 int vlan 2
 ip address 172.16.2.0 255.255.255.0
-no shut
-!
-int vlan 3
-ip address 172.16.3.0 255.255.255.0
 no shut
 !
 int vlan 4
