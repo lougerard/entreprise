@@ -1,0 +1,18 @@
+Connection avec VMWare à l'adresse ip 172.16.7.2.
+
+Mise en place de WSUS et WDS sur DCLLN02 (dans la user zone)
+("https://labo-microsoft.supinfo.com/articles/WSUS/")
+Nous avons créé un dossier "WSUS" sur le disque C pour pouvoir stocker les mises à jours windows.
+
+Accès possible à une interface de gestion de WSUS à l'adresse
+"https://DCLLN02/WSUSAdmin"
+
+CONFIGURATION du service WSUS
+(configuration nécessite un serveur proxy il faudra rajouter par la suite)
+
+
+Mise en place d'un serveur NTP sur DCLLN02 (dans la user zone)
+("https://www.server-world.info/en/note?os=Windows_Server_2016&p=ntp&f=1")
+
+Configurer pour fournir l'horloge à toutes les machines (pas restreindre à ipsec)
+Nom : ntpserv
