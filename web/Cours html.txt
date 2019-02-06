@@ -1,0 +1,50 @@
+﻿<h2>Qu'est-ce que HTML?</h2>
+<p>Le HTML est un standard de balisage pour la création de pages web</p>
+<ul>
+<li>HTML signifie "Hyper Text Markup Language"</li>
+  <li>HTML décrit la structure des pages web utilisant du balisage</li>
+  <li>Les pages HTML sont construites à partir de blocks HTML</li>
+  <li>Les éléments HTML sont représentés par des tags</li>
+  <li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on</li>
+  <li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
+</ul>
+
+<img src="exCode1.png" alt="exemple de code 1">
+
+<hr>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exemple expliqué</font></font></h2>
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La </font></font><code class="w3-codespan">&lt;!DOCTYPE html&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">déclaration définit ce document en HTML5</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">L' </font></font><code class="w3-codespan">&lt;html&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">élément est l'élément racine d'une page HTML</font></font></li>
+ <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">L' </font></font><code class="w3-codespan">&lt;head&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">élément contient des méta-informations sur le document</font></font></li>
+ <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">L' </font></font><code class="w3-codespan">&lt;title&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">élément spécifie un titre pour le document</font></font></li>
+ <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">L' </font></font><code class="w3-codespan">&lt;body&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">élément contient le contenu de la page visible</font></font></li>
+ <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">L' </font></font><code class="w3-codespan">&lt;h1&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">élément définit un grand en-tête</font></font></li>
+ <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">L' </font></font><code class="w3-codespan">&lt;p&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">élément définit un paragraphe</font></font></li>
+</ul>
+
+<hr>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Balises HTML</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Les balises HTML sont des noms d’éléments entourés de crochets:</font></font></p>
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Les balises HTML viennent normalement </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">par paires</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> comme </font></font><code class="w3-codespan">&lt;p&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">et</font></font><code class="w3-codespan">&lt;/p&gt;</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La première balise dans une paire est la </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balise de début,</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> la deuxième balise est la </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balise de fin</font></font></b></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La balise de fin est écrite comme la balise de début, mais avec une </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">barre oblique</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">  
+insérée avant le nom de la balise</font></font></li>
+</ul>
+
+<hr>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Navigateurs Web</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le but d'un navigateur Web (Chrome, IE, Firefox, Safari) est de lire des documents HTML et de les afficher.
+
+Le navigateur n'affiche pas les balises HTML, mais les utilise pour déterminer le mode d'affichage du document:</font></font></p>
+
+<img src="exCode2.png" alt="exemple de code 2">
+
+
+<hr>
+<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Structure de la page HTML</font></font></h2>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ci-dessous, une visualisation de la structure d'une page HTML:</font></font></p>
+
+<img src="exCode3.png" alt="exemple de code 3">
+
