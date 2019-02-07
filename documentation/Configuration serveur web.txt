@@ -1,0 +1,14 @@
+Ajout du protocole 443 dans le fichier 000-default.conf
+
+Ajout de l'ip statique sur le serveur:
+suivre "Static IP Address Assignment" dans le tuto https://help.ubuntu.com/lts/serverguide/network-configuration.html.en
+A ajouter dans le fichier présent dans /etc/netplan/
+Mettre l'ip:
+- Ip 172.16.7.5/24
+
+Restart avec "sudo netplan apply"
+
+
+
+Appliquer un certificat certbot:
+Suivre le tuto à "https://certbot.eff.org/lets-encrypt/ubuntubionic-apache"
