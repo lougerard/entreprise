@@ -62,16 +62,68 @@ name VENTE
 exit
 !
 !
-en
-conf t
-int f0/2
-switchport trunk encapsulation dot1q
-switchport mode trunk
+int vlan x
+ip address 172.16.x.253 255.255.255.0
+no shut
+ip helper address 172.16.7.4
 !
 !
+!configuration VTP
 en
 conf t
 vtp domain CCorp-LLN
 vtp mode server
 vtp password groupb
 end
+!
+!
+! configuration de etherchannel avec LACP
+en
+conf t
+int range fx/x-x
+channel-protocol lacp
+channel-group 1 mode active
+no shut
+exit
+int port-channel
+sw tr enca dot1q
+sw tr native vlan 99
+sw mode trunk
+!
+!
+! configuration HSRP
+en
+conf t
+int fx/x
+standby 1 ip xxx.xxx.xxx.xxx
+standby 1 priority 200
+standby 1 preempt
+!
+!
+!show standby
+!
+!
+!
+en
+conf t
+int vlan 5
+ip address 172.16.5.253 255.255.255.0
+no shut
+standby 1 ip 172.16.5.252
+standby 1 priority 105
+standby 1 preempt
+!
+!
+en
+conf t
+router ospf 1
+router-id 2.2.2.2
+network 172.16.3.0 0.0.0.7 area 0
+network 172.16.2.0 0.0.0.255 area 0
+network 172.16.4.0 0.0.0.255 area 0
+network 172.16.5.0 0.0.0.255 area 0
+network 172.16.6.0 0.0.0.255 area 0
+network 172.16.8.0 0.0.0.255 area 0
+network 172.16.9.0 0.0.0.255 area 0
+network 172.16.10.0 0.0.0.255 area 0
+network 172.16.11.0 0.0.0.255 area 0

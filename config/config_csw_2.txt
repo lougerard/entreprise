@@ -45,4 +45,42 @@ conf t
 vtp mode client
 vtp domain CCorp-LLN
 !
+! configuration HSRP
 !
+!
+en
+conf t
+int fx/x
+standby 1 ip xxx.xxx.xxx.xxx
+standby 1 preempt
+! show standby
+!
+!
+! configuration de etherchannel avec LACP
+en
+conf t
+int range fx/x-x
+channel-protocol lacp
+channel-group 1 mode active
+no shut
+exit
+exit
+!
+!
+en
+conf t
+ip routing
+
+déclaration des vlan
+voir CSW-1
+
+config des int vlan avec ip
+voir CSW-1
+
+int vers le router
+descr
+no switchport
+
+
+
+

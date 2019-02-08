@@ -3,8 +3,8 @@
 !
 en
 conf t
-hostname LLN-SW-1
-banner motd #Bienvenue sur le Switch 1#
+hostname LLN-SW-2
+banner motd #Bienvenue sur le Switch 2#
 !
 !
 en
@@ -17,7 +17,7 @@ en
 conf t
 line cons 0
 password groupb
-loginconf
+login
 logging synchronous
 !
 !
@@ -33,6 +33,7 @@ conf t
 no ip domain lookup
 !
 !
+!
 en
 conf 
 vtp mode client
@@ -45,18 +46,4 @@ int f0/23-24
 switchport mode trunk
 !
 !
-!
-!
-int f0/1
-sw m a
-sw acc vlan 2
-int f0/2
-sw m a
-sw a vlan 4
-int f0/3
-sw m a 
-sw acc vlan 2
-int f0/24
-sw m trunk
-
 ip default-gateway 172.16.99.252
