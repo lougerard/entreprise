@@ -1,0 +1,30 @@
+// lien:
+// https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+sudo apt update
+sudo apt install mysql-server
+sudo mysql_secure_installation
+// enter "yes"
+// select Medium password
+// enter password
+Passw0rd!
+
+// remove anonymous users
+
+// ne pas supprimer l'accès root
+
+// supprimer la DB test créée par défaut
+
+// recharger les privilèges pour qu'ils s'appliquent immédiatement
+
+// ajuster les privilèges d'authentification
+sudo mysql
+
+// vérifier les méthodes d'authentification
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+// modifier le root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Passw0rd!';
+
+FLUSH PRIVILEGES;
+
+CREATE DATABASE siteWeb;
